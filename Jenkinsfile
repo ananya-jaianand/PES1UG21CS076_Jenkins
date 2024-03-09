@@ -36,11 +36,12 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deployment Successful'
+                skdls
             }
             post {
                 always {
                     catchError {
-                        h 'echo "Deploy stage completed"'
+                        sh 'echo "Deploy stage completed"'
                     }
                 }
             }
