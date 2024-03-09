@@ -33,27 +33,18 @@ pipeline {
             }
         }
         
-        // stage('Deploy') {
-        //     steps {
-        //         echo 'Deployment Successful'
-        //     }
-        //     post {
-        //         always {
-        //             catchError {
-        //                 sh 'echo "Deploy stage completed"'
-        //             }
-        //         }
-        //     }
-        // }
-
         stage('Deploy') {
-  steps {
-    script {
-      sh 'exit 1' // This will exit the script with a non-zero code, simulating a deployment failure
-    }
-  }
-}
-
+            steps {
+                echo 'Deployment Successful'
+            }
+            post {
+                always {
+                    catchError {
+                        sh 'echo "Deploy stage completed"'
+                    }
+                }
+            }
+        }
     }
     post {
         always {
