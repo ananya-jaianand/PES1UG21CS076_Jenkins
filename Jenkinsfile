@@ -36,7 +36,6 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deployment Successful'
-                skdls
             }
             post {
                 always {
