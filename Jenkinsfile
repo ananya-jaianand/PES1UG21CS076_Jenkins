@@ -40,7 +40,7 @@ pipeline {
             post {
                 always {
                     catchError {
-                        sh 'echo "Deploy stage completed"'
+                        h 'echo "Deploy stage completed"'
                     }
                 }
             }
